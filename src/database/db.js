@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 async function connectDatabase() {
   await mongoose.connect(
-    "mongodb+srv://junioleonel:DWVWTbXRiOoKw9Sb@cluster0.8cx3wni.mongodb.net/?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.8cx3wni.mongodb.net/?retryWrites=true&w=majority`
   );
 }
 
